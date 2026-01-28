@@ -1,0 +1,1537 @@
+[
+  {
+    "id": { "aspen": "STU001", "state": "IL-2024-00001" },
+    "name": { "first": "Aaliyah", "last": "Johnson", "preferred": "Aaliyah" },
+    "demographics": {
+      "dob": "2016-03-15",
+      "age": 9,
+      "gender": "Female",
+      "ethnicity": "Black/African American",
+      "language": "English",
+      "address": "1234 Oak Street, Chicago, IL 60601"
+    },
+    "enrollment": {
+      "grade": 3,
+      "homeroom": "203",
+      "teacher": "Ms. Rodriguez",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2023-08-21"
+    },
+    "contacts": [
+      { "name": "Michelle Johnson", "relation": "Mother", "phone": "(312) 555-0101", "email": "m.johnson@email.com", "primary": true, "emergency": true },
+      { "name": "David Johnson", "relation": "Father", "phone": "(312) 555-0102", "email": "d.johnson@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Peanuts"],
+      "medications": [],
+      "conditions": ["Asthma - mild"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-08-01",
+      "notes": "Has rescue inhaler in nurse's office"
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": true,
+      "healthPlanType": "Asthma Action Plan",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "Weekly check-in for asthma management"
+    },
+    "flags": ["Health Plan"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU002", "state": "IL-2024-00002" },
+    "name": { "first": "Brandon", "last": "Martinez", "preferred": "Brandon" },
+    "demographics": {
+      "dob": "2015-07-22",
+      "age": 10,
+      "gender": "Male",
+      "ethnicity": "Hispanic/Latino",
+      "language": "Spanish",
+      "address": "567 Maple Avenue, Chicago, IL 60602"
+    },
+    "enrollment": {
+      "grade": 4,
+      "homeroom": "305",
+      "teacher": "Mr. Thompson",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2021-08-23"
+    },
+    "contacts": [
+      { "name": "Maria Martinez", "relation": "Mother", "phone": "(312) 555-0201", "email": "maria.m@email.com", "primary": true, "emergency": true },
+      { "name": "Carlos Martinez", "relation": "Father", "phone": "(312) 555-0202", "email": "carlos.m@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": ["Adderall 10mg - AM"],
+      "conditions": ["ADHD"],
+      "vision": "Corrected - glasses",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-06-15",
+      "notes": "Takes medication at home before school"
+    },
+    "plans": {
+      "iep": true,
+      "iepDate": "2024-02-15",
+      "iepGoals": ["Improve focus during independent work", "Develop organizational skills"],
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": true,
+      "behaviorPlanType": "Self-regulation strategies"
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": true,
+      "psychologyNotes": "Monthly consultation for ADHD support",
+      "socialWork": true,
+      "socialWorkNotes": "Weekly check-in, social skills group Wednesdays",
+      "nursing": false
+    },
+    "flags": ["IEP", "Behavior Plan"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU003", "state": "IL-2024-00003" },
+    "name": { "first": "Chloe", "last": "Kim", "preferred": "Chloe" },
+    "demographics": {
+      "dob": "2017-11-08",
+      "age": 8,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "language": "Korean",
+      "address": "890 Pine Road, Chicago, IL 60603"
+    },
+    "enrollment": {
+      "grade": 2,
+      "homeroom": "108",
+      "teacher": "Mrs. Washington",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2023-08-21"
+    },
+    "contacts": [
+      { "name": "Jin Kim", "relation": "Mother", "phone": "(312) 555-0301", "email": "jin.kim@email.com", "primary": true, "emergency": true },
+      { "name": "Hyun Kim", "relation": "Father", "phone": "(312) 555-0302", "email": "hyun.kim@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Shellfish", "Tree nuts"],
+      "medications": ["EpiPen - as needed"],
+      "conditions": ["Severe food allergies"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-20",
+      "notes": "EpiPen in nurse's office and classroom. Food allergy action plan on file."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": true,
+      "plan504Date": "2023-09-15",
+      "plan504Accommodations": ["Allergen-free lunch table", "Field trip food accommodations", "EpiPen accessibility"],
+      "healthPlan": true,
+      "healthPlanType": "Food Allergy Emergency Plan",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "Monthly allergy management review"
+    },
+    "flags": ["504 Plan", "Health Plan", "Severe Allergies"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU004", "state": "IL-2024-00004" },
+    "name": { "first": "DeShawn", "last": "Williams", "preferred": "DJ" },
+    "demographics": {
+      "dob": "2014-01-30",
+      "age": 11,
+      "gender": "Male",
+      "ethnicity": "Black/African American",
+      "language": "English",
+      "address": "2345 Elm Street, Chicago, IL 60604"
+    },
+    "enrollment": {
+      "grade": 5,
+      "homeroom": "401",
+      "teacher": "Ms. Chen",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2019-08-19"
+    },
+    "contacts": [
+      { "name": "Patricia Williams", "relation": "Grandmother", "phone": "(312) 555-0401", "email": "p.williams@email.com", "primary": true, "emergency": true },
+      { "name": "Robert Williams", "relation": "Uncle", "phone": "(312) 555-0402", "email": "r.williams@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-05-10",
+      "notes": ""
+    },
+    "plans": {
+      "iep": true,
+      "iepDate": "2024-01-20",
+      "iepGoals": ["Improve reading fluency to grade level", "Increase reading comprehension"],
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": true,
+      "speechNotes": "2x weekly, articulation and fluency",
+      "occupational": false,
+      "psychology": false,
+      "socialWork": true,
+      "socialWorkNotes": "Bi-weekly individual sessions - grief counseling",
+      "nursing": false
+    },
+    "flags": ["IEP"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU005", "state": "IL-2024-00005" },
+    "name": { "first": "Emma", "last": "O'Brien", "preferred": "Emma" },
+    "demographics": {
+      "dob": "2016-09-12",
+      "age": 9,
+      "gender": "Female",
+      "ethnicity": "White",
+      "language": "English",
+      "address": "678 Cedar Lane, Chicago, IL 60605"
+    },
+    "enrollment": {
+      "grade": 3,
+      "homeroom": "205",
+      "teacher": "Mr. Patel",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2022-08-22"
+    },
+    "contacts": [
+      { "name": "Megan O'Brien", "relation": "Mother", "phone": "(312) 555-0501", "email": "megan.ob@email.com", "primary": true, "emergency": true },
+      { "name": "Sean O'Brien", "relation": "Father", "phone": "(312) 555-0502", "email": "sean.ob@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Penicillin"],
+      "medications": [],
+      "conditions": ["Type 1 Diabetes"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-08-05",
+      "notes": "Insulin pump. Blood glucose monitoring before lunch. Nurse notified if below 70 or above 300."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": true,
+      "plan504Date": "2023-10-01",
+      "plan504Accommodations": ["Unlimited bathroom access", "Snack access as needed", "Blood glucose monitoring", "Extended time on tests if needed due to low blood sugar"],
+      "healthPlan": true,
+      "healthPlanType": "Diabetes Management Plan",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "Daily blood glucose check before lunch. Training provided to classroom teacher."
+    },
+    "flags": ["504 Plan", "Health Plan", "Diabetes"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU006", "state": "IL-2024-00006" },
+    "name": { "first": "Fatima", "last": "Hassan", "preferred": "Fatima" },
+    "demographics": {
+      "dob": "2015-04-25",
+      "age": 10,
+      "gender": "Female",
+      "ethnicity": "Middle Eastern",
+      "language": "Arabic",
+      "address": "901 Birch Street, Chicago, IL 60606"
+    },
+    "enrollment": {
+      "grade": 4,
+      "homeroom": "302",
+      "teacher": "Mrs. Lewis",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2023-01-10"
+    },
+    "contacts": [
+      { "name": "Amira Hassan", "relation": "Mother", "phone": "(312) 555-0601", "email": "amira.h@email.com", "primary": true, "emergency": true },
+      { "name": "Omar Hassan", "relation": "Father", "phone": "(312) 555-0602", "email": "omar.h@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-04-15",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": true,
+      "socialWorkNotes": "Monthly check-in - transition support, new to country",
+      "nursing": false
+    },
+    "flags": ["ELL"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU007", "state": "IL-2024-00007" },
+    "name": { "first": "Gabriel", "last": "Rivera", "preferred": "Gabe" },
+    "demographics": {
+      "dob": "2017-06-18",
+      "age": 8,
+      "gender": "Male",
+      "ethnicity": "Hispanic/Latino",
+      "language": "English",
+      "address": "234 Walnut Avenue, Chicago, IL 60607"
+    },
+    "enrollment": {
+      "grade": 2,
+      "homeroom": "106",
+      "teacher": "Ms. Anderson",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2022-08-22"
+    },
+    "contacts": [
+      { "name": "Sofia Rivera", "relation": "Mother", "phone": "(312) 555-0701", "email": "sofia.r@email.com", "primary": true, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Latex"],
+      "medications": [],
+      "conditions": ["Autism Spectrum Disorder"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-06-01",
+      "notes": "Sensory sensitivities - noise and bright lights. Has noise-canceling headphones."
+    },
+    "plans": {
+      "iep": true,
+      "iepDate": "2024-03-10",
+      "iepGoals": ["Increase social interaction with peers", "Develop self-regulation strategies", "Improve fine motor skills"],
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": true,
+      "behaviorPlanType": "Sensory breaks and visual schedule"
+    },
+    "services": {
+      "speech": true,
+      "speechNotes": "3x weekly - pragmatic language skills",
+      "occupational": true,
+      "occupationalNotes": "2x weekly - fine motor, sensory integration",
+      "psychology": true,
+      "psychologyNotes": "Monthly consultation, social skills assessment",
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["IEP", "Behavior Plan", "Autism"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU008", "state": "IL-2024-00008" },
+    "name": { "first": "Hannah", "last": "Goldstein", "preferred": "Hannah" },
+    "demographics": {
+      "dob": "2014-12-03",
+      "age": 11,
+      "gender": "Female",
+      "ethnicity": "White",
+      "language": "English",
+      "address": "567 Spruce Drive, Chicago, IL 60608"
+    },
+    "enrollment": {
+      "grade": 5,
+      "homeroom": "405",
+      "teacher": "Mr. Jackson",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2019-08-19"
+    },
+    "contacts": [
+      { "name": "Rachel Goldstein", "relation": "Mother", "phone": "(312) 555-0801", "email": "rachel.g@email.com", "primary": true, "emergency": true },
+      { "name": "David Goldstein", "relation": "Father", "phone": "(312) 555-0802", "email": "david.g@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": ["Zoloft 25mg - AM"],
+      "conditions": ["Anxiety disorder"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-01",
+      "notes": "Takes medication at home. Has anxiety management plan."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": true,
+      "plan504Date": "2024-01-15",
+      "plan504Accommodations": ["Extended time on tests", "Preferential seating", "Access to counselor", "Flexible deadlines during acute episodes"],
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": true,
+      "psychologyNotes": "Weekly individual therapy - CBT for anxiety",
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["504 Plan"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU009", "state": "IL-2024-00009" },
+    "name": { "first": "Isaiah", "last": "Thompson", "preferred": "Isaiah" },
+    "demographics": {
+      "dob": "2016-02-14",
+      "age": 9,
+      "gender": "Male",
+      "ethnicity": "Black/African American",
+      "language": "English",
+      "address": "890 Oak Lane, Chicago, IL 60609"
+    },
+    "enrollment": {
+      "grade": 3,
+      "homeroom": "201",
+      "teacher": "Mrs. Murphy",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2021-08-23"
+    },
+    "contacts": [
+      { "name": "Jasmine Thompson", "relation": "Mother", "phone": "(312) 555-0901", "email": "jasmine.t@email.com", "primary": true, "emergency": true },
+      { "name": "Marcus Thompson", "relation": "Father", "phone": "(312) 555-0902", "email": "marcus.t@email.com", "primary": false, "emergency": true },
+      { "name": "Gloria Thompson", "relation": "Grandmother", "phone": "(312) 555-0903", "email": "", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-08-10",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU010", "state": "IL-2024-00010" },
+    "name": { "first": "Julia", "last": "Kowalski", "preferred": "Julia" },
+    "demographics": {
+      "dob": "2018-08-20",
+      "age": 7,
+      "gender": "Female",
+      "ethnicity": "White",
+      "language": "Polish",
+      "address": "123 Ash Street, Chicago, IL 60610"
+    },
+    "enrollment": {
+      "grade": 1,
+      "homeroom": "102",
+      "teacher": "Mrs. Davis",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2024-08-19"
+    },
+    "contacts": [
+      { "name": "Anna Kowalski", "relation": "Mother", "phone": "(312) 555-1001", "email": "anna.k@email.com", "primary": true, "emergency": true },
+      { "name": "Piotr Kowalski", "relation": "Father", "phone": "(312) 555-1002", "email": "piotr.k@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-15",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": true,
+      "speechNotes": "2x weekly - phonological awareness, English language support",
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["ELL"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU011", "state": "IL-2024-00011" },
+    "name": { "first": "Kevin", "last": "Nguyen", "preferred": "Kevin" },
+    "demographics": {
+      "dob": "2015-10-05",
+      "age": 10,
+      "gender": "Male",
+      "ethnicity": "Asian",
+      "language": "Vietnamese",
+      "address": "456 Poplar Court, Chicago, IL 60611"
+    },
+    "enrollment": {
+      "grade": 4,
+      "homeroom": "301",
+      "teacher": "Ms. Brown",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2020-08-24"
+    },
+    "contacts": [
+      { "name": "Linh Nguyen", "relation": "Mother", "phone": "(312) 555-1101", "email": "linh.n@email.com", "primary": true, "emergency": true },
+      { "name": "Tuan Nguyen", "relation": "Father", "phone": "(312) 555-1102", "email": "tuan.n@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Bee stings"],
+      "medications": ["EpiPen - as needed"],
+      "conditions": [],
+      "vision": "Corrected - glasses",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-05-20",
+      "notes": "EpiPen in nurse's office for bee sting allergy"
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": true,
+      "healthPlanType": "Bee Sting Allergy Plan",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "EpiPen management, outdoor activity awareness"
+    },
+    "flags": ["Health Plan"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU012", "state": "IL-2024-00012" },
+    "name": { "first": "Luna", "last": "Garcia", "preferred": "Luna" },
+    "demographics": {
+      "dob": "2017-03-28",
+      "age": 8,
+      "gender": "Female",
+      "ethnicity": "Hispanic/Latino",
+      "language": "Spanish",
+      "address": "789 Cherry Lane, Chicago, IL 60612"
+    },
+    "enrollment": {
+      "grade": 2,
+      "homeroom": "107",
+      "teacher": "Mr. Wilson",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2022-08-22"
+    },
+    "contacts": [
+      { "name": "Elena Garcia", "relation": "Mother", "phone": "(312) 555-1201", "email": "elena.g@email.com", "primary": true, "emergency": true },
+      { "name": "Roberto Garcia", "relation": "Father", "phone": "(312) 555-1202", "email": "roberto.g@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": ["Hearing impairment - mild, left ear"],
+      "vision": "Normal",
+      "hearing": "Mild loss - left ear, uses FM system",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-06-10",
+      "notes": "Uses FM system in classroom. Preferential seating near teacher."
+    },
+    "plans": {
+      "iep": true,
+      "iepDate": "2024-02-01",
+      "iepGoals": ["Improve listening comprehension", "Develop self-advocacy skills for hearing needs"],
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": true,
+      "speechNotes": "2x weekly - auditory processing, listening skills",
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["IEP", "Hearing"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU013", "state": "IL-2024-00013" },
+    "name": { "first": "Mason", "last": "Clark", "preferred": "Mason" },
+    "demographics": {
+      "dob": "2014-05-17",
+      "age": 11,
+      "gender": "Male",
+      "ethnicity": "Multiracial",
+      "language": "English",
+      "address": "321 Willow Way, Chicago, IL 60613"
+    },
+    "enrollment": {
+      "grade": 5,
+      "homeroom": "403",
+      "teacher": "Mrs. Taylor",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2019-08-19"
+    },
+    "contacts": [
+      { "name": "Jennifer Clark", "relation": "Mother", "phone": "(312) 555-1301", "email": "jennifer.c@email.com", "primary": true, "emergency": true },
+      { "name": "Michael Clark", "relation": "Father", "phone": "(312) 555-1302", "email": "michael.c@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": ["Seizure disorder - controlled"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-04-01",
+      "notes": "Seizure disorder well-controlled with medication taken at home. Seizure action plan on file."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": true,
+      "plan504Date": "2023-11-01",
+      "plan504Accommodations": ["Seizure action plan", "Staff trained in seizure response", "Rest after seizure episode", "Make-up work accommodations"],
+      "healthPlan": true,
+      "healthPlanType": "Seizure Action Plan",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "Seizure monitoring, staff training coordination"
+    },
+    "flags": ["504 Plan", "Health Plan", "Seizure Disorder"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU014", "state": "IL-2024-00014" },
+    "name": { "first": "Nadia", "last": "Petrova", "preferred": "Nadia" },
+    "demographics": {
+      "dob": "2016-11-22",
+      "age": 9,
+      "gender": "Female",
+      "ethnicity": "White",
+      "language": "Russian",
+      "address": "654 Sycamore Street, Chicago, IL 60614"
+    },
+    "enrollment": {
+      "grade": 3,
+      "homeroom": "204",
+      "teacher": "Ms. Martinez",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2024-01-08"
+    },
+    "contacts": [
+      { "name": "Olga Petrova", "relation": "Mother", "phone": "(312) 555-1401", "email": "olga.p@email.com", "primary": true, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-01-02",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": true,
+      "socialWorkNotes": "Bi-weekly check-in - new student support, refugee family services",
+      "nursing": false
+    },
+    "flags": ["ELL", "New Student"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU015", "state": "IL-2024-00015" },
+    "name": { "first": "Oliver", "last": "Wright", "preferred": "Ollie" },
+    "demographics": {
+      "dob": "2018-01-09",
+      "age": 7,
+      "gender": "Male",
+      "ethnicity": "White",
+      "language": "English",
+      "address": "987 Magnolia Drive, Chicago, IL 60615"
+    },
+    "enrollment": {
+      "grade": 1,
+      "homeroom": "104",
+      "teacher": "Mrs. Garcia",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2024-08-19"
+    },
+    "contacts": [
+      { "name": "Sarah Wright", "relation": "Mother", "phone": "(312) 555-1501", "email": "sarah.w@email.com", "primary": true, "emergency": true },
+      { "name": "James Wright", "relation": "Father", "phone": "(312) 555-1502", "email": "james.w@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Milk", "Eggs"],
+      "medications": [],
+      "conditions": ["Food allergies"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-25",
+      "notes": "Dairy-free and egg-free diet. Brings lunch from home."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": true,
+      "healthPlanType": "Food Allergy Plan",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": true,
+      "speechNotes": "2x weekly - articulation (r, l sounds)",
+      "occupational": true,
+      "occupationalNotes": "1x weekly - handwriting, fine motor skills",
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["Health Plan"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU016", "state": "IL-2024-00016" },
+    "name": { "first": "Priya", "last": "Sharma", "preferred": "Priya" },
+    "demographics": {
+      "dob": "2015-08-14",
+      "age": 10,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "language": "Hindi",
+      "address": "246 Hickory Lane, Chicago, IL 60616"
+    },
+    "enrollment": {
+      "grade": 4,
+      "homeroom": "304",
+      "teacher": "Mr. Lee",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2021-08-23"
+    },
+    "contacts": [
+      { "name": "Anita Sharma", "relation": "Mother", "phone": "(312) 555-1601", "email": "anita.s@email.com", "primary": true, "emergency": true },
+      { "name": "Raj Sharma", "relation": "Father", "phone": "(312) 555-1602", "email": "raj.s@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-08-01",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU017", "state": "IL-2024-00017" },
+    "name": { "first": "Quinn", "last": "Murphy", "preferred": "Quinn" },
+    "demographics": {
+      "dob": "2017-04-02",
+      "age": 8,
+      "gender": "Non-binary",
+      "ethnicity": "White",
+      "language": "English",
+      "address": "135 Cypress Court, Chicago, IL 60617"
+    },
+    "enrollment": {
+      "grade": 2,
+      "homeroom": "105",
+      "teacher": "Ms. Kim",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2022-08-22"
+    },
+    "contacts": [
+      { "name": "Erin Murphy", "relation": "Parent", "phone": "(312) 555-1701", "email": "erin.m@email.com", "primary": true, "emergency": true },
+      { "name": "Patrick Murphy", "relation": "Parent", "phone": "(312) 555-1702", "email": "patrick.m@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-06-20",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": true,
+      "socialWorkNotes": "Monthly check-in - support for gender identity",
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU018", "state": "IL-2024-00018" },
+    "name": { "first": "Ryan", "last": "Fitzgerald", "preferred": "Ryan" },
+    "demographics": {
+      "dob": "2014-09-30",
+      "age": 11,
+      "gender": "Male",
+      "ethnicity": "White",
+      "language": "English",
+      "address": "579 Redwood Road, Chicago, IL 60618"
+    },
+    "enrollment": {
+      "grade": 5,
+      "homeroom": "402",
+      "teacher": "Ms. Robinson",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2019-08-19"
+    },
+    "contacts": [
+      { "name": "Kelly Fitzgerald", "relation": "Mother", "phone": "(312) 555-1801", "email": "kelly.f@email.com", "primary": true, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": ["Concerta 27mg - AM", "Melatonin 3mg - PM"],
+      "conditions": ["ADHD", "Sleep disorder"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-03-15",
+      "notes": "Morning medication taken at home. Sometimes fatigued in morning."
+    },
+    "plans": {
+      "iep": true,
+      "iepDate": "2024-04-01",
+      "iepGoals": ["Improve task completion", "Develop time management skills", "Increase writing stamina"],
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": true,
+      "behaviorPlanType": "Executive function supports, movement breaks"
+    },
+    "services": {
+      "speech": false,
+      "occupational": true,
+      "occupationalNotes": "1x weekly - executive function, organization strategies",
+      "psychology": true,
+      "psychologyNotes": "Bi-weekly consultation, executive function coaching",
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["IEP", "Behavior Plan"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU019", "state": "IL-2024-00019" },
+    "name": { "first": "Sofia", "last": "Delgado", "preferred": "Sofia" },
+    "demographics": {
+      "dob": "2016-06-07",
+      "age": 9,
+      "gender": "Female",
+      "ethnicity": "Hispanic/Latino",
+      "language": "Spanish",
+      "address": "802 Palm Street, Chicago, IL 60619"
+    },
+    "enrollment": {
+      "grade": 3,
+      "homeroom": "202",
+      "teacher": "Mr. Adams",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2021-08-23"
+    },
+    "contacts": [
+      { "name": "Carmen Delgado", "relation": "Mother", "phone": "(312) 555-1901", "email": "carmen.d@email.com", "primary": true, "emergency": true },
+      { "name": "Luis Delgado", "relation": "Father", "phone": "(312) 555-1902", "email": "luis.d@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Corrected - glasses",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-10",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU020", "state": "IL-2024-00020" },
+    "name": { "first": "Tyler", "last": "Washington", "preferred": "Ty" },
+    "demographics": {
+      "dob": "2018-02-25",
+      "age": 7,
+      "gender": "Male",
+      "ethnicity": "Black/African American",
+      "language": "English",
+      "address": "468 Juniper Avenue, Chicago, IL 60620"
+    },
+    "enrollment": {
+      "grade": 1,
+      "homeroom": "101",
+      "teacher": "Mrs. Nelson",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2024-08-19"
+    },
+    "contacts": [
+      { "name": "Tamika Washington", "relation": "Mother", "phone": "(312) 555-2001", "email": "tamika.w@email.com", "primary": true, "emergency": true },
+      { "name": "Andre Washington", "relation": "Father", "phone": "(312) 555-2002", "email": "andre.w@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": ["Developmental delay"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-08-05",
+      "notes": ""
+    },
+    "plans": {
+      "iep": true,
+      "iepDate": "2024-05-15",
+      "iepGoals": ["Improve pre-reading skills", "Develop number sense", "Increase attention span"],
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": true,
+      "speechNotes": "3x weekly - language development, vocabulary",
+      "occupational": true,
+      "occupationalNotes": "2x weekly - fine motor, pre-writing skills",
+      "psychology": true,
+      "psychologyNotes": "Monthly developmental monitoring",
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["IEP"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU021", "state": "IL-2024-00021" },
+    "name": { "first": "Uma", "last": "Patel", "preferred": "Uma" },
+    "demographics": {
+      "dob": "2015-12-18",
+      "age": 10,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "language": "Gujarati",
+      "address": "913 Fern Lane, Chicago, IL 60621"
+    },
+    "enrollment": {
+      "grade": 4,
+      "homeroom": "303",
+      "teacher": "Mrs. Harris",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2020-08-24"
+    },
+    "contacts": [
+      { "name": "Meera Patel", "relation": "Mother", "phone": "(312) 555-2101", "email": "meera.p@email.com", "primary": true, "emergency": true },
+      { "name": "Vikram Patel", "relation": "Father", "phone": "(312) 555-2102", "email": "vikram.p@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-05-25",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU022", "state": "IL-2024-00022" },
+    "name": { "first": "Victor", "last": "Santos", "preferred": "Vic" },
+    "demographics": {
+      "dob": "2017-07-11",
+      "age": 8,
+      "gender": "Male",
+      "ethnicity": "Hispanic/Latino",
+      "language": "Portuguese",
+      "address": "357 Ivy Road, Chicago, IL 60622"
+    },
+    "enrollment": {
+      "grade": 2,
+      "homeroom": "109",
+      "teacher": "Mr. Foster",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2023-08-21"
+    },
+    "contacts": [
+      { "name": "Lucia Santos", "relation": "Mother", "phone": "(312) 555-2201", "email": "lucia.s@email.com", "primary": true, "emergency": true },
+      { "name": "Paulo Santos", "relation": "Father", "phone": "(312) 555-2202", "email": "paulo.s@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": ["Stutter"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-06-30",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": true,
+      "speechNotes": "3x weekly - fluency therapy",
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": ["ELL"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU023", "state": "IL-2024-00023" },
+    "name": { "first": "Willow", "last": "Bennett", "preferred": "Willow" },
+    "demographics": {
+      "dob": "2014-04-08",
+      "age": 11,
+      "gender": "Female",
+      "ethnicity": "White",
+      "language": "English",
+      "address": "680 Aspen Way, Chicago, IL 60623"
+    },
+    "enrollment": {
+      "grade": 5,
+      "homeroom": "404",
+      "teacher": "Mr. Cooper",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2019-08-19"
+    },
+    "contacts": [
+      { "name": "Claire Bennett", "relation": "Mother", "phone": "(312) 555-2301", "email": "claire.b@email.com", "primary": true, "emergency": true },
+      { "name": "Daniel Bennett", "relation": "Father", "phone": "(312) 555-2302", "email": "daniel.b@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": ["Depression - mild"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-04-20",
+      "notes": "Currently in outpatient therapy. School aware of safety plan."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": true,
+      "plan504Date": "2024-03-01",
+      "plan504Accommodations": ["Access to counselor", "Flexible seating", "Check-ins with trusted adult", "Reduced homework during acute episodes"],
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": true,
+      "psychologyNotes": "Weekly individual therapy, safety monitoring",
+      "socialWork": true,
+      "socialWorkNotes": "Daily check-in, coordinates with outside therapist",
+      "nursing": false
+    },
+    "flags": ["504 Plan", "Mental Health"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU024", "state": "IL-2024-00024" },
+    "name": { "first": "Xavier", "last": "Brooks", "preferred": "X" },
+    "demographics": {
+      "dob": "2016-10-14",
+      "age": 9,
+      "gender": "Male",
+      "ethnicity": "Black/African American",
+      "language": "English",
+      "address": "124 Laurel Street, Chicago, IL 60624"
+    },
+    "enrollment": {
+      "grade": 3,
+      "homeroom": "206",
+      "teacher": "Mrs. Young",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2021-08-23"
+    },
+    "contacts": [
+      { "name": "Keisha Brooks", "relation": "Mother", "phone": "(312) 555-2401", "email": "keisha.b@email.com", "primary": true, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": ["Sickle cell trait"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-08-12",
+      "notes": "Sickle cell trait - usually asymptomatic. Stay hydrated during physical activity."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": true,
+      "healthPlanType": "Sickle Cell Management",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "Hydration monitoring during PE and recess"
+    },
+    "flags": ["Health Plan"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU025", "state": "IL-2024-00025" },
+    "name": { "first": "Yuki", "last": "Tanaka", "preferred": "Yuki" },
+    "demographics": {
+      "dob": "2018-05-23",
+      "age": 7,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "language": "Japanese",
+      "address": "791 Maple Court, Chicago, IL 60625"
+    },
+    "enrollment": {
+      "grade": 1,
+      "homeroom": "103",
+      "teacher": "Ms. White",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2024-08-19"
+    },
+    "contacts": [
+      { "name": "Akiko Tanaka", "relation": "Mother", "phone": "(312) 555-2501", "email": "akiko.t@email.com", "primary": true, "emergency": true },
+      { "name": "Kenji Tanaka", "relation": "Father", "phone": "(312) 555-2502", "email": "kenji.t@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-30",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": true,
+      "socialWorkNotes": "Monthly check-in - new student, international family",
+      "nursing": false
+    },
+    "flags": ["ELL", "New Student"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU026", "state": "IL-2024-00026" },
+    "name": { "first": "Zoe", "last": "Campbell", "preferred": "Zoe" },
+    "demographics": {
+      "dob": "2015-01-27",
+      "age": 10,
+      "gender": "Female",
+      "ethnicity": "Multiracial",
+      "language": "English",
+      "address": "468 Beech Boulevard, Chicago, IL 60626"
+    },
+    "enrollment": {
+      "grade": 4,
+      "homeroom": "306",
+      "teacher": "Ms. Turner",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2020-08-24"
+    },
+    "contacts": [
+      { "name": "Nicole Campbell", "relation": "Mother", "phone": "(312) 555-2601", "email": "nicole.c@email.com", "primary": true, "emergency": true },
+      { "name": "Marcus Campbell", "relation": "Father", "phone": "(312) 555-2602", "email": "marcus.c@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Amoxicillin"],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-06-05",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU027", "state": "IL-2024-00027" },
+    "name": { "first": "Aiden", "last": "O'Connor", "preferred": "Aiden" },
+    "demographics": {
+      "dob": "2017-09-05",
+      "age": 8,
+      "gender": "Male",
+      "ethnicity": "White",
+      "language": "English",
+      "address": "235 Holly Drive, Chicago, IL 60627"
+    },
+    "enrollment": {
+      "grade": 2,
+      "homeroom": "110",
+      "teacher": "Mrs. Mitchell",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2022-08-22"
+    },
+    "contacts": [
+      { "name": "Colleen O'Connor", "relation": "Mother", "phone": "(312) 555-2701", "email": "colleen.o@email.com", "primary": true, "emergency": true },
+      { "name": "Brian O'Connor", "relation": "Father", "phone": "(312) 555-2702", "email": "brian.o@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": ["Cerebral palsy - mild"],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-05-15",
+      "notes": "Uses walker for mobility. Adapted PE program."
+    },
+    "plans": {
+      "iep": true,
+      "iepDate": "2024-04-20",
+      "iepGoals": ["Improve handwriting legibility", "Increase physical independence", "Develop typing skills"],
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": true,
+      "occupationalNotes": "3x weekly - fine motor, adaptive equipment training",
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "Physical comfort checks, mobility support coordination"
+    },
+    "flags": ["IEP", "Physical Disability"],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU028", "state": "IL-2024-00028" },
+    "name": { "first": "Bella", "last": "Rodriguez", "preferred": "Bella" },
+    "demographics": {
+      "dob": "2014-08-19",
+      "age": 11,
+      "gender": "Female",
+      "ethnicity": "Hispanic/Latino",
+      "language": "Spanish",
+      "address": "579 Cedar Court, Chicago, IL 60628"
+    },
+    "enrollment": {
+      "grade": 5,
+      "homeroom": "406",
+      "teacher": "Mrs. Scott",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2019-08-19"
+    },
+    "contacts": [
+      { "name": "Rosa Rodriguez", "relation": "Mother", "phone": "(312) 555-2801", "email": "rosa.r@email.com", "primary": true, "emergency": true },
+      { "name": "Miguel Rodriguez", "relation": "Father", "phone": "(312) 555-2802", "email": "miguel.r@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Corrected - glasses",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-22",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU029", "state": "IL-2024-00029" },
+    "name": { "first": "Caleb", "last": "Jackson", "preferred": "Caleb" },
+    "demographics": {
+      "dob": "2016-12-01",
+      "age": 9,
+      "gender": "Male",
+      "ethnicity": "Black/African American",
+      "language": "English",
+      "address": "892 Birch Lane, Chicago, IL 60629"
+    },
+    "enrollment": {
+      "grade": 3,
+      "homeroom": "207",
+      "teacher": "Mr. Phillips",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2021-08-23"
+    },
+    "contacts": [
+      { "name": "Denise Jackson", "relation": "Mother", "phone": "(312) 555-2901", "email": "denise.j@email.com", "primary": true, "emergency": true }
+    ],
+    "health": {
+      "allergies": [],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-08-08",
+      "notes": ""
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": false,
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": true,
+      "socialWorkNotes": "Bi-weekly check-in - family support services",
+      "nursing": false
+    },
+    "flags": [],
+    "photo": null
+  },
+  {
+    "id": { "aspen": "STU030", "state": "IL-2024-00030" },
+    "name": { "first": "Diana", "last": "Chen", "preferred": "Diana" },
+    "demographics": {
+      "dob": "2018-03-14",
+      "age": 7,
+      "gender": "Female",
+      "ethnicity": "Asian",
+      "language": "Mandarin",
+      "address": "146 Spruce Street, Chicago, IL 60630"
+    },
+    "enrollment": {
+      "grade": 1,
+      "homeroom": "105",
+      "teacher": "Ms. Kim",
+      "school": "Example Elementary School",
+      "status": "Active",
+      "enrollDate": "2024-08-19"
+    },
+    "contacts": [
+      { "name": "Wei Chen", "relation": "Mother", "phone": "(312) 555-3001", "email": "wei.c@email.com", "primary": true, "emergency": true },
+      { "name": "Jun Chen", "relation": "Father", "phone": "(312) 555-3002", "email": "jun.c@email.com", "primary": false, "emergency": true }
+    ],
+    "health": {
+      "allergies": ["Sesame"],
+      "medications": [],
+      "conditions": [],
+      "vision": "Normal",
+      "hearing": "Normal",
+      "immunizations": "Up to date",
+      "lastPhysical": "2024-07-18",
+      "notes": "Sesame allergy - mild reaction. Avoids sesame products at lunch."
+    },
+    "plans": {
+      "iep": false,
+      "plan504": false,
+      "healthPlan": true,
+      "healthPlanType": "Food Allergy Awareness",
+      "behaviorPlan": false
+    },
+    "services": {
+      "speech": false,
+      "occupational": false,
+      "psychology": false,
+      "socialWork": false,
+      "nursing": true,
+      "nursingNotes": "Monitors cafeteria for sesame-containing foods"
+    },
+    "flags": ["ELL", "New Student", "Health Plan"],
+    "photo": null
+  }
+]
