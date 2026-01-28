@@ -1,0 +1,922 @@
+/* ========================================
+   CPS Clinician Portal - Main Stylesheet
+   Modernized, Accessible, Responsive Design
+   ======================================== */
+
+/* CSS Custom Properties (Design Tokens) */
+:root {
+    /* CPS Brand Colors */
+    --cps-blue: #003087;
+    --cps-blue-dark: #001f5c;
+    --cps-blue-light: #0052cc;
+    --cps-accent: #4a90d9;
+    --cps-gold: #ffc220;
+
+    /* Neutral Colors */
+    --white: #ffffff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+
+    /* Semantic Colors */
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --info: #3b82f6;
+
+    /* Typography */
+    --font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-size-xs: 0.75rem;
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.125rem;
+    --font-size-xl: 1.25rem;
+    --font-size-2xl: 1.5rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+
+    /* Spacing */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+    --radius-full: 9999px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 350ms ease;
+
+    /* Focus Ring */
+    --focus-ring: 0 0 0 3px rgba(74, 144, 217, 0.5);
+}
+
+/* ========================================
+   Reset & Base Styles
+   ======================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--gray-800);
+    background-color: var(--gray-50);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--cps-blue-light);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--cps-blue);
+    text-decoration: underline;
+}
+
+/* Focus Styles for Accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:focus {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cps-blue);
+    color: var(--white);
+    padding: var(--spacing-2) var(--spacing-4);
+    z-index: 1000;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Visually Hidden (for screen readers) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   Default App Layout (Students pages)
+   ======================================== */
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(135deg, var(--cps-blue), var(--cps-blue-dark));
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-6);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    box-shadow: var(--shadow-md);
+    z-index: 100;
+}
+
+.side-nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+    background: var(--white);
+    border-right: 1px solid var(--gray-200);
+    padding: var(--spacing-4);
+    overflow-y: auto;
+}
+
+.side-nav a {
+    display: block;
+    padding: var(--spacing-3) var(--spacing-4);
+    border-radius: var(--radius-md);
+    color: var(--gray-700);
+    font-weight: 500;
+    transition: all var(--transition-fast);
+}
+
+.side-nav a:hover {
+    background: var(--gray-100);
+    color: var(--cps-blue);
+    text-decoration: none;
+}
+
+.side-nav a:focus {
+    background: var(--cps-blue);
+    color: var(--white);
+}
+
+#app-root {
+    margin-top: 60px;
+    margin-left: 220px;
+    padding: var(--spacing-6);
+    min-height: calc(100vh - 60px);
+}
+
+/* ========================================
+   Login Page Layout Override
+   ======================================== */
+
+body.login-page .top-bar,
+body.login-page .side-nav {
+    display: none;
+}
+
+body.login-page #app-root {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========================================
+   Login Container
+   ======================================== */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   Login Header
+   ======================================== */
+
+.login-header {
+    background: linear-gradient(135deg, var(--cps-blue), var(--cps-blue-dark));
+    color: var(--white);
+    padding: var(--spacing-4) var(--spacing-6);
+    box-shadow: var(--shadow-md);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cps-logo {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+}
+
+.cps-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-text h1 {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo-text p {
+    font-size: var(--font-size-sm);
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* ========================================
+   Hero Section
+   ======================================== */
+
+.login-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-section {
+    background: linear-gradient(180deg, var(--cps-blue) 0%, var(--cps-blue-light) 50%, var(--gray-100) 100%);
+    padding: var(--spacing-12) var(--spacing-6);
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    color: var(--white);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-4);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-8);
+    line-height: 1.7;
+}
+
+/* ========================================
+   Login Card
+   ======================================== */
+
+.login-card {
+    background: var(--white);
+    padding: var(--spacing-8);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    text-align: left;
+}
+
+.login-card h3 {
+    color: var(--gray-800);
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    margin-bottom: var(--spacing-6);
+    text-align: center;
+}
+
+/* ========================================
+   Login Form
+   ======================================== */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-5);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+}
+
+.form-group label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+.form-group input {
+    padding: var(--spacing-3) var(--spacing-4);
+    font-size: var(--font-size-base);
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    background: var(--white);
+}
+
+.form-group input::placeholder {
+    color: var(--gray-400);
+}
+
+.form-group input:hover {
+    border-color: var(--gray-400);
+}
+
+.form-group input:focus {
+    border-color: var(--cps-accent);
+    box-shadow: var(--focus-ring);
+}
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.btn-primary,
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-4) var(--spacing-6);
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--cps-blue), var(--cps-blue-dark));
+    color: var(--white);
+    width: 100%;
+    margin-top: var(--spacing-2);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--cps-blue-dark), var(--cps-blue-dark));
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+    text-decoration: none;
+    color: var(--white);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--cps-blue);
+    border: 2px solid var(--cps-blue);
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background: var(--cps-blue);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Login Divider */
+.login-divider {
+    display: flex;
+    align-items: center;
+    margin: var(--spacing-6) 0;
+}
+
+.login-divider::before,
+.login-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-300);
+}
+
+.login-divider span {
+    padding: 0 var(--spacing-4);
+    color: var(--gray-500);
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Help Text */
+.help-text {
+    text-align: center;
+    margin-top: var(--spacing-6);
+    font-size: var(--font-size-sm);
+    color: var(--gray-600);
+}
+
+.help-text a {
+    color: var(--cps-blue);
+}
+
+.help-text span {
+    margin: 0 var(--spacing-2);
+    color: var(--gray-400);
+}
+
+/* ========================================
+   Roles Section
+   ======================================== */
+
+.roles-section {
+    padding: var(--spacing-12) var(--spacing-6);
+    background: var(--white);
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-6);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.role-card {
+    background: var(--gray-50);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    transition: all var(--transition-base);
+    border: 2px solid transparent;
+    cursor: default;
+}
+
+.role-card:hover,
+.role-card:focus {
+    background: var(--white);
+    border-color: var(--cps-accent);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.role-card:focus {
+    outline: none;
+}
+
+.role-icon {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto var(--spacing-4);
+    background: linear-gradient(135deg, var(--cps-blue), var(--cps-blue-light));
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.role-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.role-card h4 {
+    color: var(--gray-800);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-2);
+}
+
+.role-card p {
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+}
+
+/* ========================================
+   Features Section
+   ======================================== */
+
+.features-section {
+    padding: var(--spacing-12) var(--spacing-6);
+    background: var(--gray-100);
+}
+
+.features-section h3 {
+    text-align: center;
+    color: var(--gray-800);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-8);
+}
+
+.features-list {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    background: var(--white);
+    padding: var(--spacing-4) var(--spacing-5);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+}
+
+.features-list li:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+}
+
+.features-list li svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    color: var(--success);
+    stroke-width: 3;
+}
+
+.features-list li span {
+    color: var(--gray-700);
+    font-size: var(--font-size-base);
+}
+
+/* ========================================
+   Login Footer
+   ======================================== */
+
+.login-footer {
+    background: var(--gray-800);
+    color: var(--gray-300);
+    padding: var(--spacing-8) var(--spacing-6);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-4) var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+}
+
+.footer-links a {
+    color: var(--gray-300);
+    font-size: var(--font-size-sm);
+    transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer-copyright {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-2);
+}
+
+.footer-tagline {
+    font-size: var(--font-size-sm);
+    color: var(--cps-accent);
+    font-style: italic;
+}
+
+/* ========================================
+   Student List Styles
+   ======================================== */
+
+.student-list {
+    list-style: none;
+}
+
+.student-list li {
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.student-list a {
+    display: block;
+    padding: var(--spacing-4);
+    color: var(--gray-800);
+    transition: all var(--transition-fast);
+}
+
+.student-list a:hover {
+    background: var(--gray-100);
+    text-decoration: none;
+    color: var(--cps-blue);
+}
+
+/* ========================================
+   Student Detail Styles
+   ======================================== */
+
+.student-header {
+    margin-bottom: var(--spacing-6);
+    padding-bottom: var(--spacing-4);
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.student-header h1 {
+    font-size: var(--font-size-2xl);
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-2);
+}
+
+.student-header p {
+    color: var(--gray-600);
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-6);
+    border-bottom: 2px solid var(--gray-200);
+    padding-bottom: var(--spacing-2);
+}
+
+.tab-btn {
+    padding: var(--spacing-2) var(--spacing-4);
+    background: var(--gray-100);
+    border: none;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    color: var(--gray-600);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.tab-btn:hover {
+    background: var(--gray-200);
+    color: var(--gray-800);
+}
+
+.tab-btn.active {
+    background: var(--cps-blue);
+    color: var(--white);
+}
+
+#tab-content {
+    background: var(--white);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    :root {
+        --font-size-3xl: 1.5rem;
+        --font-size-2xl: 1.25rem;
+    }
+
+    .side-nav {
+        width: 180px;
+    }
+
+    #app-root {
+        margin-left: 180px;
+    }
+
+    .roles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 1.75rem;
+        --font-size-3xl: 1.375rem;
+        --font-size-2xl: 1.125rem;
+        --font-size-xl: 1rem;
+    }
+
+    /* Hide sidebar on mobile */
+    .top-bar {
+        padding: 0 var(--spacing-4);
+        font-size: var(--font-size-lg);
+    }
+
+    .side-nav {
+        display: none;
+    }
+
+    #app-root {
+        margin-left: 0;
+        padding: var(--spacing-4);
+    }
+
+    /* Login Page Mobile */
+    .login-header {
+        padding: var(--spacing-3) var(--spacing-4);
+    }
+
+    .logo-container {
+        gap: var(--spacing-3);
+    }
+
+    .cps-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text h1 {
+        font-size: var(--font-size-lg);
+    }
+
+    .hero-section {
+        padding: var(--spacing-8) var(--spacing-4);
+    }
+
+    .hero-content h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .login-card {
+        padding: var(--spacing-6);
+        border-radius: var(--radius-lg);
+    }
+
+    .roles-section,
+    .features-section {
+        padding: var(--spacing-8) var(--spacing-4);
+    }
+
+    .roles-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+
+    .role-card {
+        padding: var(--spacing-5);
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: var(--spacing-3);
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .login-card {
+        padding: var(--spacing-5);
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: var(--spacing-3) var(--spacing-4);
+    }
+
+    .help-text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-2);
+    }
+
+    .help-text span {
+        display: none;
+    }
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ========================================
+   High Contrast Mode
+   ======================================== */
+
+@media (prefers-contrast: high) {
+    :root {
+        --cps-blue: #000080;
+        --gray-300: #767676;
+        --gray-400: #595959;
+    }
+
+    .form-group input {
+        border-width: 3px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        border-width: 3px;
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+
+@media print {
+    .login-header,
+    .login-footer,
+    .login-card,
+    .side-nav,
+    .top-bar {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+}

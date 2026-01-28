@@ -3,19 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Aspen Lite</title>
+    <title>CPS Clinician Portal - Aspen Lite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chicago Public Schools Clinician Portal for nurses, social workers, psychologists, speech therapists, and occupational therapists.">
+    <meta name="theme-color" content="#003087">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://aspen.cps.edu">
+
+    <!-- Favicon placeholder -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23003087'/><text x='50' y='65' font-size='40' text-anchor='middle' fill='white' font-weight='bold'>CPS</text></svg>">
+
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <header class="top-bar">Aspen Lite</header>
+    <header class="top-bar">
+        <a href="#/" style="color: inherit; text-decoration: none;">Aspen Lite</a>
+    </header>
 
-    <nav class="side-nav">
+    <nav class="side-nav" aria-label="Main navigation">
+        <a href="#/">Home</a>
         <a href="#/students">Students</a>
     </nav>
 
-    <main id="app-root"></main>
+    <main id="app-root" role="main"></main>
 
     <script type="module" src="app/router.js"></script>
 </body>
