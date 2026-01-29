@@ -189,42 +189,44 @@ def get_school_students(school_id):
     conn = get_db()
     cursor = conn.cursor()
 
-    # Build query
-    query = '''
-        SELECT student_id as studentId, first_name as firstName, last_name as lastName,
-               grade, gender, ethnicity, address, zip_code as zipCode
-        FROM students
-        WHERE school_id = ?
-    '''
+    # Build WHERE clause for both queries
+    where_conditions = ['school_id = ?']
     params = [school_id]
 
     if grade:
-        query += ' AND grade = ?'
+        where_conditions.append('grade = ?')
         params.append(int(grade))
 
     if gender:
-        query += ' AND gender = ?'
+        where_conditions.append('gender = ?')
         params.append(gender)
 
     if ethnicity:
-        query += ' AND ethnicity = ?'
+        where_conditions.append('ethnicity = ?')
         params.append(ethnicity)
 
     if search:
-        query += ' AND (first_name LIKE ? OR last_name LIKE ? OR student_id LIKE ?)'
+        where_conditions.append('(first_name LIKE ? OR last_name LIKE ? OR student_id LIKE ?)')
         search_pattern = f'%{search}%'
         params.extend([search_pattern, search_pattern, search_pattern])
 
-    # Get total count
-    count_query = query.replace(
-        'SELECT student_id as studentId, first_name as firstName, last_name as lastName, grade, gender, ethnicity, address, zip_code as zipCode',
-        'SELECT COUNT(*)'
-    )
-    cursor.execute(count_query, params)
-    total = cursor.fetchone()[0]
+    where_clause = 'WHERE ' + ' AND '.join(where_conditions)
 
-    # Add pagination
-    query += ' ORDER BY last_name, first_name LIMIT ? OFFSET ?'
+    # Get total count with the same filters
+    count_query = f'SELECT COUNT(*) FROM students {where_clause}'
+    cursor.execute(count_query, params)
+    count_result = cursor.fetchone()
+    total = count_result[0] if count_result else 0
+
+    # Build main query
+    query = f'''
+        SELECT student_id as studentId, first_name as firstName, last_name as lastName,
+               grade, gender, ethnicity, address, zip_code as zipCode
+        FROM students
+        {where_clause}
+        ORDER BY last_name, first_name
+        LIMIT ? OFFSET ?
+    '''
     params.extend([limit + 1, offset])
 
     cursor.execute(query, params)

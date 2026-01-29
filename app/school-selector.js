@@ -1,6 +1,6 @@
 // School Selector Component
 
-import { getCurrentSchool, setCurrentSchool, getFavorites, toggleFavorite, isFavorite } from './state.js';
+import { getCurrentSchool, setCurrentSchool, getFavorites, toggleFavorite, isFavorite, getRecentlySelected } from './state.js';
 import { debounce } from './utils.js';
 import { getSchools, getFavoriteSchools } from './api.js';
 
@@ -9,6 +9,7 @@ let filteredSchools = [];
 let isOpen = false;
 let isLoading = false;
 let favoriteSchoolsData = [];
+let recentlySelectedSchoolsData = [];
 
 export async function initSchoolSelector() {
     const container = document.getElementById('school-selector-container');
@@ -33,6 +34,9 @@ async function loadSchools(search = '') {
 
         // Load favorite schools details
         await loadFavoriteSchools();
+
+        // Load recently selected schools details
+        await loadRecentlySelectedSchools();
     } catch (error) {
         console.error('Failed to load schools:', error);
         allSchools = [];
@@ -67,6 +71,32 @@ async function loadFavoriteSchools() {
     }
 }
 
+async function loadRecentlySelectedSchools() {
+    const recentlySelected = getRecentlySelected();
+    if (recentlySelected.length === 0) {
+        recentlySelectedSchoolsData = [];
+        return;
+    }
+
+    try {
+        // Get IDs from recently selected
+        const recentIds = recentlySelected.map(s => s.id).filter(id => id !== undefined);
+
+        if (recentIds.length > 0) {
+            const { schools } = await getFavoriteSchools(recentIds);
+            // Preserve the order from recentlySelected
+            recentlySelectedSchoolsData = recentlySelected
+                .map(recent => schools.find(s => s.id === recent.id))
+                .filter(s => s !== undefined);
+        } else {
+            recentlySelectedSchoolsData = [];
+        }
+    } catch (error) {
+        console.error('Failed to load recently selected schools:', error);
+        recentlySelectedSchoolsData = [];
+    }
+}
+
 function render() {
     const container = document.getElementById('school-selector-container');
     const currentSchool = getCurrentSchool();
@@ -92,6 +122,7 @@ function render() {
                 </div>
 
                 ${renderFavorites()}
+                ${renderRecentlySelected()}
                 ${renderSchoolList()}
             </div>
         </div>
@@ -113,6 +144,26 @@ function renderFavorites() {
             <div class="section-header">Favorites</div>
             <div class="school-list">
                 ${favoriteSchoolsData.map(school => renderSchoolItem(school, true)).join('')}
+            </div>
+        </div>
+        <div class="section-divider"></div>
+    `;
+}
+
+function renderRecentlySelected() {
+    // Don't show if no recently selected schools (excluding current)
+    const currentSchoolName = getCurrentSchool();
+    const recentExcludingCurrent = recentlySelectedSchoolsData.filter(s => s.name !== currentSchoolName);
+
+    if (recentExcludingCurrent.length === 0) {
+        return '';  // Don't show empty section
+    }
+
+    return `
+        <div class="recently-selected-section">
+            <div class="section-header">Previously Selected</div>
+            <div class="school-list">
+                ${recentExcludingCurrent.map(school => renderSchoolItem(school, false)).join('')}
             </div>
         </div>
         <div class="section-divider"></div>

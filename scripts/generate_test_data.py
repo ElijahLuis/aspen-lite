@@ -150,17 +150,44 @@ ETHNICITIES = ["Hispanic/Latino", "Black/African American", "White", "Asian"]
 GENDERS = ["Male", "Female"]
 GRADES = [9, 10, 11, 12]
 
+def generate_school_names(num_schools):
+    """Generate school names - use real CPS schools, then generate synthetic ones."""
+    schools = CPS_SCHOOLS.copy()
+
+    if num_schools > len(CPS_SCHOOLS):
+        # Generate additional synthetic school names
+        school_types = ["High School", "College Prep", "Career Academy", "STEM Academy",
+                       "Math and Science Academy", "Leadership Academy", "Arts Academy"]
+        directions = ["North", "South", "East", "West", "Central"]
+        descriptors = ["Community", "International", "Metropolitan", "Magnet", "Charter"]
+
+        # Famous educators, leaders, and Chicago figures for synthetic names
+        names = ["Washington", "Lincoln", "Roosevelt", "Jefferson", "Madison", "Hamilton",
+                "King", "DuBois", "Chavez", "Truth", "Parks", "Obama", "Douglass",
+                "Jackson", "Harrison", "Kennedy", "Monroe", "Wilson", "Adams", "Grant"]
+
+        additional_needed = num_schools - len(CPS_SCHOOLS)
+        for i in range(additional_needed):
+            # Mix of different naming patterns
+            if i % 4 == 0:
+                name = f"{random.choice(names)} {random.choice(school_types)}"
+            elif i % 4 == 1:
+                name = f"{random.choice(directions)} Chicago {random.choice(school_types)}"
+            elif i % 4 == 2:
+                name = f"{random.choice(descriptors)} {random.choice(school_types)} {i+1}"
+            else:
+                name = f"{random.choice(names)}-{random.choice(descriptors[1:])} {random.choice(school_types)}"
+
+            schools.append(name)
+
+    return schools[:num_schools]
+
 def generate_students(num_students, num_schools, output_file):
     """Generate test student data."""
     print(f"Generating {num_students:,} students across {num_schools} schools...")
 
-    # Select schools
-    if num_schools > len(CPS_SCHOOLS):
-        print(f"Warning: Requested {num_schools} schools but only {len(CPS_SCHOOLS)} available.")
-        print(f"Using all {len(CPS_SCHOOLS)} schools.")
-        schools = CPS_SCHOOLS
-    else:
-        schools = random.sample(CPS_SCHOOLS, num_schools)
+    # Generate school names
+    schools = generate_school_names(num_schools)
 
     # Calculate students per school
     base_per_school = num_students // len(schools)

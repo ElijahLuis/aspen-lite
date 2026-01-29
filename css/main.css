@@ -450,13 +450,14 @@ h1 {
     top: calc(100% + 8px);
     right: 0;
     width: 400px;
-    max-height: 500px;
+    max-height: 600px;
     background: white;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     display: none;
     flex-direction: column;
+    overflow-y: auto;
     z-index: 1000;
 }
 
@@ -484,6 +485,7 @@ h1 {
 }
 
 .favorites-section,
+.recently-selected-section,
 .all-schools-section {
     padding: 12px 0;
 }
@@ -503,8 +505,13 @@ h1 {
     margin: 0 16px;
 }
 
-.school-list {
-    max-height: 300px;
+.favorites-section .school-list,
+.recently-selected-section .school-list {
+    /* No max-height for favorites and recent - show all */
+}
+
+.all-schools-section .school-list {
+    max-height: 400px;
     overflow-y: auto;
 }
 

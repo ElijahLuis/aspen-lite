@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data files (large)
+data/generated_*.json
+data/*.db
+
+# Keep original small dataset
+!data/students.json
+
+# Logs
+*.log
+/tmp/*.log
+
+# Debug files
+debug.html
+
+# OS
+.DS_Store
+Thumbs.db

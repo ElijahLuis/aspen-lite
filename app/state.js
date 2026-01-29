@@ -3,13 +3,15 @@
 const STORAGE_KEYS = {
     CURRENT_SCHOOL: 'aspen-lite-current-school',
     CURRENT_SCHOOL_ID: 'aspen-lite-current-school-id',
-    FAVORITES: 'aspen-lite-school-favorites'
+    FAVORITES: 'aspen-lite-school-favorites',
+    RECENTLY_SELECTED: 'aspen-lite-recently-selected'
 };
 
 // Internal state
 let currentSchool = null;
 let currentSchoolId = null;
 let favorites = [];
+let recentlySelected = [];  // Array of {name, id, timestamp}
 let schoolChangeListeners = [];
 
 // Initialize state from localStorage
@@ -32,6 +34,12 @@ export function loadState() {
         if (savedFavorites) {
             favorites = JSON.parse(savedFavorites);
         }
+
+        // Load recently selected
+        const savedRecent = localStorage.getItem(STORAGE_KEYS.RECENTLY_SELECTED);
+        if (savedRecent) {
+            recentlySelected = JSON.parse(savedRecent);
+        }
     } catch (e) {
         console.warn('Failed to load state from localStorage:', e);
     }
@@ -47,6 +55,7 @@ function saveState() {
             localStorage.setItem(STORAGE_KEYS.CURRENT_SCHOOL_ID, currentSchoolId.toString());
         }
         localStorage.setItem(STORAGE_KEYS.FAVORITES, JSON.stringify(favorites));
+        localStorage.setItem(STORAGE_KEYS.RECENTLY_SELECTED, JSON.stringify(recentlySelected));
     } catch (e) {
         console.warn('Failed to save state to localStorage:', e);
     }
@@ -69,6 +78,21 @@ export function setCurrentSchool(school, schoolId = null) {
         if (schoolId !== null) {
             currentSchoolId = schoolId;
         }
+
+        // Add to recently selected (max 10, most recent first)
+        if (school && schoolId) {
+            // Remove if already exists
+            recentlySelected = recentlySelected.filter(s => s.id !== schoolId);
+            // Add to front
+            recentlySelected.unshift({
+                name: school,
+                id: schoolId,
+                timestamp: Date.now()
+            });
+            // Keep only last 10
+            recentlySelected = recentlySelected.slice(0, 10);
+        }
+
         saveState();
         notifySchoolChange(school);
     }
@@ -77,6 +101,11 @@ export function setCurrentSchool(school, schoolId = null) {
 // Get favorites list
 export function getFavorites() {
     return [...favorites];
+}
+
+// Get recently selected schools
+export function getRecentlySelected() {
+    return [...recentlySelected];
 }
 
 // Add school to favorites
@@ -142,10 +171,12 @@ export function clearState() {
     currentSchool = null;
     currentSchoolId = null;
     favorites = [];
+    recentlySelected = [];
     try {
         localStorage.removeItem(STORAGE_KEYS.CURRENT_SCHOOL);
         localStorage.removeItem(STORAGE_KEYS.CURRENT_SCHOOL_ID);
         localStorage.removeItem(STORAGE_KEYS.FAVORITES);
+        localStorage.removeItem(STORAGE_KEYS.RECENTLY_SELECTED);
     } catch (e) {
         console.warn('Failed to clear localStorage:', e);
     }
