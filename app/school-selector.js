@@ -10,6 +10,7 @@ let isOpen = false;
 let isLoading = false;
 let favoriteSchoolsData = [];
 let recentlySelectedSchoolsData = [];
+let searchQuery = '';  // Track active search query
 
 export async function initSchoolSelector() {
     const container = document.getElementById('school-selector-container');
@@ -118,12 +119,14 @@ function render() {
                         id="school-search-input"
                         placeholder="Search schools..."
                         autocomplete="off"
+                        aria-label="Search for schools"
                     />
                 </div>
 
-                ${renderFavorites()}
-                ${renderRecentlySelected()}
-                ${renderSchoolList()}
+                ${searchQuery ? renderSearchResults() : ''}
+                ${!searchQuery ? renderFavorites() : ''}
+                ${!searchQuery ? renderRecentlySelected() : ''}
+                ${!searchQuery ? renderSchoolList() : ''}
             </div>
         </div>
     `;
@@ -167,6 +170,26 @@ function renderRecentlySelected() {
             </div>
         </div>
         <div class="section-divider"></div>
+    `;
+}
+
+function renderSearchResults() {
+    if (filteredSchools.length === 0) {
+        return `
+            <div class="search-results-section">
+                <div class="section-header">Search Results</div>
+                <div class="no-results">No schools found matching "${searchQuery}"</div>
+            </div>
+        `;
+    }
+
+    return `
+        <div class="search-results-section">
+            <div class="section-header">Search Results (${filteredSchools.length})</div>
+            <div class="school-list" id="school-list">
+                ${filteredSchools.map(school => renderSchoolItem(school, false)).join('')}
+            </div>
+        </div>
     `;
 }
 
@@ -245,6 +268,7 @@ function attachListeners() {
     if (searchInput) {
         const debouncedSearch = debounce(async (query) => {
             const trimmedQuery = query.trim();
+            searchQuery = trimmedQuery;
             try {
                 const { schools } = await getSchools({ search: trimmedQuery, limit: 100 });
                 filteredSchools = schools;
@@ -295,6 +319,7 @@ async function closeDropdown(e) {
     const selector = document.querySelector('.school-selector');
     if (selector && !selector.contains(e.target) && isOpen) {
         isOpen = false;
+        searchQuery = '';  // Reset search query
         // Reset search by reloading schools
         await loadSchools();
         render();
@@ -307,9 +332,24 @@ function renderDropdownContent() {
     const searchInput = document.getElementById('school-search-input');
     const searchValue = searchInput ? searchInput.value : '';
 
-    dropdown.querySelector('.all-schools-section').outerHTML = renderSchoolList();
+    // Clear existing content sections
+    const existingSection = dropdown.querySelector('.search-results-section, .all-schools-section');
+    if (existingSection) {
+        if (searchQuery) {
+            existingSection.outerHTML = renderSearchResults();
+        } else {
+            existingSection.outerHTML = renderSchoolList();
+        }
+    }
 
-    // Restore search value and listeners
+    // If switching from no-search to search or vice versa, do a full re-render
+    if ((searchQuery && !dropdown.querySelector('.search-results-section')) ||
+        (!searchQuery && dropdown.querySelector('.search-results-section'))) {
+        render();
+        attachListeners();
+    }
+
+    // Restore search value
     const newSearchInput = document.getElementById('school-search-input');
     if (newSearchInput && searchValue) {
         newSearchInput.value = searchValue;

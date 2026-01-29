@@ -9,16 +9,17 @@
 </head>
 
 <body>
-    <header class="top-bar">
+    <header class="top-bar" role="banner">
         <span class="app-title">Aspen Lite</span>
-        <div id="school-selector-container"></div>
+        <div id="school-selector-container" role="search"></div>
     </header>
 
-    <nav class="side-nav">
-        <a href="#/students">Students</a>
+    <nav class="side-nav" role="navigation" aria-label="Main navigation">
+        <a href="#/home" aria-label="Go to home page">Home</a>
+        <a href="#/students" aria-label="View student list">Students</a>
     </nav>
 
-    <main id="app-root"></main>
+    <main id="app-root" role="main" aria-live="polite"></main>
 
     <script type="module" src="app/router.js"></script>
 </body>

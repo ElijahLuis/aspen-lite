@@ -1,10 +1,13 @@
+import { renderHome } from '../views/home.js';
 import { renderStudentList } from '../views/student-list.js';
 import { renderStudentDetail } from '../views/student-detail.js';
 import { loadState, setCurrentSchool, getCurrentSchool } from './state.js';
 import { initSchoolSelector } from './school-selector.js';
 import { getSchools } from './api.js';
+import { initDarkMode } from './dark-mode.js';
 
 const routes = {
+    '/home': renderHome,
     '/students': renderStudentList,
     '/student': renderStudentDetail,
 };
@@ -16,6 +19,9 @@ async function initialize() {
 
     // Load state from localStorage
     loadState();
+
+    // Initialize dark mode
+    initDarkMode();
 
     // Initialize school selector (it will fetch schools from API)
     await initSchoolSelector();
@@ -39,8 +45,16 @@ async function router() {
     // Initialize app on first load
     await initialize();
 
-    const hash = location.hash || '#/students';
+    const hash = location.hash || '#/home';
     const [path, id] = hash.slice(1).split('/').filter(Boolean);
+
+    // Update active nav link
+    document.querySelectorAll('.side-nav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#/${path}`) {
+            link.classList.add('active');
+        }
+    });
 
     const view = routes[`/${path}`];
     if (view) {
