@@ -32,3 +32,6 @@ debug.html
 # OS
 .DS_Store
 Thumbs.db
+node_modules
+.next
+out

@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 15 23 42;
+    --card: 248 250 252;
+    --card-foreground: 15 23 42;
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+    --border: 226 232 240;
+    --ring: 14 165 233;
+  }
+
+  .dark {
+    --background: 15 23 42;
+    --foreground: 248 250 252;
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+    --border: 51 65 85;
+    --ring: 56 189 248;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-slate-200 dark:border-slate-700;
+  }
+
+  body {
+    @apply bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium
+           transition-colors focus-visible:outline-none focus-visible:ring-2
+           focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-clinic-600 text-white hover:bg-clinic-700
+           focus-visible:ring-clinic-500 px-4 py-2;
+  }
+
+  .btn-secondary {
+    @apply btn bg-slate-100 text-slate-900 hover:bg-slate-200
+           dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700
+           focus-visible:ring-slate-500 px-4 py-2;
+  }
+
+  .btn-ghost {
+    @apply btn hover:bg-slate-100 dark:hover:bg-slate-800 px-3 py-2;
+  }
+
+  .input {
+    @apply flex h-10 w-full rounded-md border border-slate-300
+           bg-white px-3 py-2 text-sm placeholder:text-slate-400
+           focus:outline-none focus:ring-2 focus:ring-clinic-500 focus:border-transparent
+           disabled:cursor-not-allowed disabled:opacity-50
+           dark:border-slate-600 dark:bg-slate-800 dark:placeholder:text-slate-500;
+  }
+
+  .card {
+    @apply rounded-lg border bg-white dark:bg-slate-800
+           shadow-sm p-4;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5
+           text-xs font-medium;
+  }
+
+  .badge-critical {
+    @apply badge bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400;
+  }
+
+  .badge-high {
+    @apply badge bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400;
+  }
+
+  .badge-medium {
+    @apply badge bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400;
+  }
+
+  .badge-low {
+    @apply badge bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full
+           bg-slate-100 dark:bg-slate-700 px-3 py-1.5
+           text-sm cursor-pointer transition-colors
+           hover:bg-slate-200 dark:hover:bg-slate-600;
+  }
+
+  .chip-selected {
+    @apply bg-clinic-100 text-clinic-800
+           dark:bg-clinic-900/30 dark:text-clinic-400;
+  }
+}
+
+/* Keyboard focus visibility */
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2
+           focus-visible:ring-clinic-500 focus-visible:ring-offset-2;
+  }
+}
+
+/* Toast animations */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.2s ease-out;
+}
+
+.animate-slide-out {
+  animation: slide-out 0.2s ease-in;
+}
